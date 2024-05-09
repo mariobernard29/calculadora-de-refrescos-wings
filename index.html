@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de Resfrescos Barra Wings</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>CALCULO DE REQUERIMIENTO DE REFRESCOS</h1>
+    <p>Ingresa la cantidad de refrescos vendidos y la cantidad de refrescos en inventario para calcular el requerimiento de refrescos.</p>
+    <div id="calculadoras">
+        <div class="calculadora">
+            <h2>COCA COLA REGULAR</h2>
+            <label for="cantidadA1">Venta:</label>
+            <input type="number" id="cantidadA1" name="cantidadA1" required>
+
+            <label for="cantidadB1">Inventario:</label>
+            <input type="number" id="cantidadB1" name="cantidadB1" required>
+
+            <button type="button" onclick="calcularResultado1()">Calcular</button>
+
+            <div id="resultado1"></div>
+        </div>
+
+        <div class="calculadora">
+            <h2>COCA COLA LIGHT</h2>
+            <label for="cantidadA2">Venta:</label>
+            <input type="number" id="cantidadA2" name="cantidadA2" required>
+
+            <label for="cantidadB2">Inventario:</label>
+            <input type="number" id="cantidadB2" name="cantidadB2" required>
+
+            <button type="button" onclick="calcularResultado2()">Calcular</button>
+
+            <div id="resultado2"></div>
+        </div>
+
+        <div class="calculadora">
+            <h2>COCA COLA ZERO</h2>
+            <label for="cantidadA3">Venta:</label>
+            <input type="number" id="cantidadA3" name="cantidadA3" required>
+
+            <label for="cantidadB3">Inventario:</label>
+            <input type="number" id="cantidadB3" name="cantidadB3" required>
+
+            <button type="button" onclick="calcularResultado3()">Calcular</button>
+
+            <div id="resultado3"></div>
+        </div>
+
+        <div class="calculadora">
+            <h2>SPRITE</h2>
+            <label for="cantidadA4">Venta:</label>
+            <input type="number" id="cantidadA4" name="cantidadA4" required>
+    
+            <label for="cantidadB4">Inventario:</label>
+            <input type="number" id="cantidadB4" name="cantidadB4" required>
+    
+            <button type="button" onclick="calcularResultado4()">Calcular</button>
+    
+            <div id="resultado4"></div>
+        </div>
+    
+        <div class="calculadora">
+            <h2>FANTA</h2>
+            <label for="cantidadA5">Venta:</label>
+            <input type="number" id="cantidadA5" name="cantidadA5" required>
+    
+            <label for="cantidadB5">Inventario:</label>
+            <input type="number" id="cantidadB5" name="cantidadB5" required>
+    
+            <button type="button" onclick="calcularResultado5()">Calcular</button>
+    
+            <div id="resultado5"></div>
+        </div>
+    
+        <div class="calculadora">
+            <h2>FRESCA</h2>
+            <label for="cantidadA6">Venta:</label>
+            <input type="number" id="cantidadA6" name="cantidadA6" required>
+    
+            <label for="cantidadB6">Inventario:</label>
+            <input type="number" id="cantidadB6" name="cantidadB6" required>
+    
+            <button type="button" onclick="calcularResultado6()">Calcular</button>
+    
+            <div id="resultado6"></div>
+        </div>
+
+        <div class="calculadora">
+            <h2>SIDRAL MUNDET</h2>
+            <label for="cantidadA7">Venta:</label>
+            <input type="number" id="cantidadA7" name="cantidadA7" required>
+    
+            <label for="cantidadB7">Inventario:</label>
+            <input type="number" id="cantidadB7" name="cantidadB7" required>
+    
+            <button type="button" onclick="calcularResultado7()">Calcular</button>
+    
+            <div id="resultado7"></div>
+        </div>
+
+        <div class="calculadora">
+            <h2>CIEL NATURAL</h2>
+            <label for="cantidadA8">Venta:</label>
+            <input type="number" id="cantidadA8" name="cantidadA8" required>
+    
+            <label for="cantidadB8">Inventario:</label>
+            <input type="number" id="cantidadB8" name="cantidadB8" required>
+    
+            <button type="button" onclick="calcularResultado8()">Calcular</button>
+    
+            <div id="resultado8"></div>
+        </div>
+
+        <div class="calculadora">
+            <h2>CIEL MINERAL</h2>
+            <label for="cantidadA9">Venta:</label>
+            <input type="number" id="cantidadA9" name="cantidadA9" required>
+    
+            <label for="cantidadB9">Inventario:</label>
+            <input type="number" id="cantidadB9" name="cantidadB9" required>
+    
+            <button type="button" onclick="calcularResultado9()">Calcular</button>
+    
+            <div id="resultado9"></div>
+        </div>
+    </div>
+</div>
+
+    <footer>
+        <p>Desarrollado por Mario Bernard</p>
+
+    <script>
+        function calcularResultado1() {
+            // Código para calcular el requerimiento de coca cola regular
+            const cantidadA1 = Number(document.getElementById('cantidadA1').value);
+            const cantidadB1 = Number(document.getElementById('cantidadB1').value);
+
+            const resultado1 = (cantidadA1 - cantidadB1) / 24;
+
+            document.getElementById('resultado1').innerHTML = `
+                <p>Coca Cola Regular = ${resultado1.toFixed(2)}</p>
+            `;
+        }
+
+        function calcularResultado2() {
+            // Código similar a calcularResultado1, pero utilizando los IDs de la calculadora 2 coca cola light
+            const cantidadA2 = Number(document.getElementById('cantidadA2').value);
+            const cantidadB2 = Number(document.getElementById('cantidadB2').value);
+
+            const resultado2 = (cantidadA2 - cantidadB2) / 12;
+
+            document.getElementById('resultado2').innerHTML = `
+                <p>Coca Cola Light = ${resultado2.toFixed(2)}</p>
+            `;
+        }
+
+        function calcularResultado3() {
+            // Código similar a calcularResultado1, pero utilizando los IDs de la calculadora 3 coca cola zero
+            const cantidadA3 = Number(document.getElementById('cantidadA3').value);
+            const cantidadB3 = Number(document.getElementById('cantidadB3').value);
+
+            const resultado3 = (cantidadA3 - cantidadB3) / 12;
+
+            document.getElementById('resultado3').innerHTML = `
+                <p>Coca Cola SA = ${resultado3.toFixed(2)}</p>
+            `;
+        }
+
+        function calcularResultado4() {
+            // Código similar a calcularResultado1, pero utilizando los IDs de la calculadora 4 srpite
+            const cantidadA4 = Number(document.getElementById('cantidadA4').value);
+            const cantidadB4 = Number(document.getElementById('cantidadB4').value);
+
+            const resultado4 = (cantidadA4 - cantidadB4) / 12;
+
+            document.getElementById('resultado4').innerHTML = `
+                <p>Sprite: ${resultado4.toFixed(2)}</p>
+            `;
+        }
+
+        function calcularResultado5() {
+            // Código similar a calcularResultado1, pero utilizando los IDs de la calculadora 5 fanta
+            const cantidadA5 = Number(document.getElementById('cantidadA5').value);
+            const cantidadB5 = Number(document.getElementById('cantidadB5').value);
+
+            const resultado5 = (cantidadA5 - cantidadB5) / 12;
+
+            document.getElementById('resultado5').innerHTML = `
+                <p>Fanta: ${resultado5.toFixed(2)}</p>
+            `;
+        }
+
+        function calcularResultado6() {
+            // Código similar a calcularResultado1, pero utilizando los IDs de la calculadora 6 fresca
+            const cantidadA6 = Number(document.getElementById('cantidadA6').value);
+            const cantidadB6 = Number(document.getElementById('cantidadB6').value);
+
+            const resultado6 = (cantidadA6 - cantidadB6) / 12;
+
+            document.getElementById('resultado6').innerHTML = `
+                <p>Fresca: ${resultado6.toFixed(2)}</p>
+            `;
+        }
+
+        function calcularResultado7() {
+            // Código similar a calcularResultado1, pero utilizando los IDs de la calculadora 7 sidral mundet
+            const cantidadA7 = Number(document.getElementById('cantidadA7').value);
+            const cantidadB7 = Number(document.getElementById('cantidadB7').value);
+
+            const resultado7 = (cantidadA7 - cantidadB7) / 12;
+
+            document.getElementById('resultado7').innerHTML = `
+                <p>Sidral Mundet: ${resultado7.toFixed(2)}</p>
+            `;
+        }
+
+        function calcularResultado8() {
+            // Código similar a calcularResultado1, pero utilizando los IDs de la calculadora 8 ciel natural
+            const cantidadA8 = Number(document.getElementById('cantidadA8').value);
+            const cantidadB8 = Number(document.getElementById('cantidadB8').value);
+
+            const resultado8 = (cantidadA8 - cantidadB8) / 24;
+
+            document.getElementById('resultado8').innerHTML = `
+                <p>Ciel Natural: ${resultado8.toFixed(2)}</p>
+            `;
+        }
+
+        function calcularResultado9() {
+            // Código similar a calcularResultado1, pero utilizando los IDs de la calculadora 9 ciel mineral
+            const cantidadA9 = Number(document.getElementById('cantidadA9').value);
+            const cantidadB9 = Number(document.getElementById('cantidadB9').value);
+
+            const resultado9 = (cantidadA9 - cantidadB9) / 12;
+
+            document.getElementById('resultado9').innerHTML = `
+                <p>Ciel Mineral: ${resultado9.toFixed(2)}</p>
+            `;
+        }
+    </script>
+</body>
+</html>

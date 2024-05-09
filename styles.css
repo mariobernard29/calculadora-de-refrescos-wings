@@ -1,0 +1,70 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+#calculadoras {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las calculadoras se acomoden en varias filas si es necesario */
+    justify-content: space-between; /* Distribuye las calculadoras con espacio entre ellas */
+    max-width: 1000px; /* Limita el ancho total de las calculadoras */
+    margin: 0 auto; /* Centra las calculadoras en la página */
+    padding: 20px;
+}
+
+.calculadora {
+    border: 1px solid #ccc; /* Creates a border around the calculator */
+    border-radius: 5px; /* Rounds the corners of the calculator */
+    padding: 15px; /* Adds padding inside the calculator */
+    margin-bottom: 20px; /* Adds space between each calculator */
+    background-color: #f5f5f5; /* Sets a light gray background color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow effect */
+}
+  
+  .calculadora h2 {
+    margin-bottom: 10px; /* Adds space below the title */
+  }
+  
+  .calculadora label {
+    display: block; /* Makes labels appear on separate lines */
+    margin-bottom: 5px; /* Adds space below labels */
+  }
+  
+  .calculadora input {
+    width: 95%; /* Makes input fields full width */
+    padding: 8px; /* Adds padding to input fields */
+    border: 1px solid #ccc; /* Creates a border on input fields */
+    border-radius: 3px; /* Rounds the corners of input fields */
+    margin-bottom: 10px; /* Adds space below input fields */
+  }
+  
+  .calculadora button {
+    padding: 10px 20px; /* Sets padding for the button */
+    background-color: #007bff; /* Sets a blue background color */
+    color: white; /* Sets white text color */
+    border: none; /* Removes border from the button */
+    border-radius: 3px; /* Rounds the corners of the button */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+  }
+  
+  .calculadora .resultado {
+    border: 1px solid #ccc; /* Creates a border around the result */
+    border-radius: 5px; /* Rounds the corners of the result */
+    padding: 10px; /* Adds padding inside the result */
+    margin-top: 10px; /* Adds space above the result */
+    background-color: #e0e0e0; /* Sets a light gray background color for the result */
+  }
+  
+
+
+
+
+
+/* Media queries para ajustar el diseño en pantallas pequeñas */
+
+@media (max-width: 600px) {
+    .calculadora {
+        width: 100%; /* Las calculadoras ocupan todo el ancho en pantallas pequeñas */
+    }
+}
